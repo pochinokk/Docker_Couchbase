@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  couchbase:
+    image: couchbase
+    container_name: couchbase_container
+    ports:
+      - "8091:8091"
+      - "8092:8092"
+      - "8093:8093"
+      - "11210:11210"
+    environment:
+      - COUCHBASE_ADMINISTRATOR_USERNAME=admin
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
